@@ -86,6 +86,30 @@ class Contact extends CActiveRecord
 			'note' => 'Note',
 		);
 	}
+	
+	/**
+	 * Suggests a list of existing contacts matching the specified keyword.
+	 * @param string the keyword to be matched
+	 * @param integer maximum number of tags to be returned
+	 * @return array list of matching tag names
+	 */
+	public function suggestParticipants($keyword,$limit=20)
+	{
+	    $participants=$this->findAll(array(
+			'condition'=>'name LIKE :keyword',
+			'order'=>'name',
+			'limit'=>$limit,
+			'params'=>array(
+				':keyword'=>'%'.strtr($keyword,array('%'=>'\%', '_'=>'\_', '\\'=>'\\\\')).'%',
+			),
+		));
+		$names=array();
+		
+		foreach($participants as $participant)
+			$names[]=$participant->name.' '.$participant->surname;
+			
+		return $names;
+	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
