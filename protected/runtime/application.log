@@ -94,3 +94,2468 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/06/17 14:48:33 [error] [exception.CException] exception 'CException' with message 'Alias "user.UserModule" is invalid. Make sure it points to an existing PHP file.' in /home/koleto/public_html/calendar/framework/YiiBase.php:318
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/YiiBase.php(198): YiiBase::import('user.UserModule', true)
+#1 /home/koleto/public_html/calendar/framework/base/CModule.php(283): YiiBase::createComponent('user.UserModule', 'user', NULL, Array)
+#2 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(331): CModule->getModule('user')
+#3 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(270): CWebApplication->createController('user/login')
+#4 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login')
+#5 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/user/login
+---
+2012/06/17 14:48:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:49:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'calendar.{{users}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{users}}`.
+in /home/koleto/public_html/calendar/protected/modules/user/models/User.php (33)
+in /home/koleto/public_html/calendar/protected/modules/user/components/UserIdentity.php (27)
+in /home/koleto/public_html/calendar/protected/modules/user/models/UserLogin.php (52)
+2012/06/17 14:49:04 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "User" cannot be found in the database.' in /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 /home/koleto/public_html/calendar/protected/modules/user/models/User.php(33): CActiveRecord::model('User')
+#2 /home/koleto/public_html/calendar/protected/modules/user/components/UserIdentity.php(27): User::model()
+#3 /home/koleto/public_html/calendar/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#4 /home/koleto/public_html/calendar/framework/validators/CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 /home/koleto/public_html/calendar/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 /home/koleto/public_html/calendar/framework/base/CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 /home/koleto/public_html/calendar/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#8 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): LoginController->actionLogin()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('')
+#13 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login')
+#14 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/user/login
+HTTP_REFERER=http://calendar.dev/user/login
+---
+2012/06/17 14:49:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:52:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'calendar.{{users}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{users}}`.
+in /home/koleto/public_html/calendar/protected/modules/user/models/User.php (33)
+in /home/koleto/public_html/calendar/protected/modules/user/components/UserIdentity.php (27)
+in /home/koleto/public_html/calendar/protected/modules/user/models/UserLogin.php (52)
+2012/06/17 14:52:34 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "User" cannot be found in the database.' in /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 /home/koleto/public_html/calendar/protected/modules/user/models/User.php(33): CActiveRecord::model('User')
+#2 /home/koleto/public_html/calendar/protected/modules/user/components/UserIdentity.php(27): User::model()
+#3 /home/koleto/public_html/calendar/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#4 /home/koleto/public_html/calendar/framework/validators/CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 /home/koleto/public_html/calendar/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 /home/koleto/public_html/calendar/framework/base/CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 /home/koleto/public_html/calendar/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#8 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): LoginController->actionLogin()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('')
+#13 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login')
+#14 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/user/login
+HTTP_REFERER=http://calendar.dev/user/login
+---
+2012/06/17 14:52:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:52:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'calendar.{{users}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{users}}`.
+in /home/koleto/public_html/calendar/protected/modules/user/models/User.php (33)
+in /home/koleto/public_html/calendar/protected/modules/user/components/UserIdentity.php (27)
+in /home/koleto/public_html/calendar/protected/modules/user/models/UserLogin.php (52)
+2012/06/17 14:52:36 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "User" cannot be found in the database.' in /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 /home/koleto/public_html/calendar/protected/modules/user/models/User.php(33): CActiveRecord::model('User')
+#2 /home/koleto/public_html/calendar/protected/modules/user/components/UserIdentity.php(27): User::model()
+#3 /home/koleto/public_html/calendar/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#4 /home/koleto/public_html/calendar/framework/validators/CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 /home/koleto/public_html/calendar/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 /home/koleto/public_html/calendar/framework/base/CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 /home/koleto/public_html/calendar/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#8 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): LoginController->actionLogin()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('')
+#13 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login')
+#14 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/user/login
+HTTP_REFERER=http://calendar.dev/user/login
+---
+2012/06/17 14:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:55:56 [error] [exception.CDbException] exception 'CDbException' with message 'Active record "User" is trying to select an invalid column "user.lastvisit_at". Note, the column must exist in the table or be an expression with alias.' in /home/koleto/public_html/calendar/framework/db/ar/CActiveFinder.php:974
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveFinder.php(1269): CJoinElement->getColumnSelect(Array)
+#1 /home/koleto/public_html/calendar/framework/db/ar/CActiveFinder.php(448): CJoinQuery->__construct(Object(CJoinElement), Object(CDbCriteria))
+#2 /home/koleto/public_html/calendar/framework/db/ar/CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#3 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), false)
+#4 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(1455): CActiveRecord->query(Object(CDbCriteria))
+#5 /home/koleto/public_html/calendar/protected/modules/user/components/UserIdentity.php(27): CActiveRecord->findByAttributes(Array)
+#6 /home/koleto/public_html/calendar/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#7 /home/koleto/public_html/calendar/framework/validators/CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#8 /home/koleto/public_html/calendar/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#9 /home/koleto/public_html/calendar/framework/base/CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#10 /home/koleto/public_html/calendar/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#11 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): LoginController->actionLogin()
+#12 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/koleto/public_html/calendar/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('')
+#16 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login')
+#17 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/user/login
+HTTP_REFERER=http://calendar.dev/user/login
+---
+2012/06/17 14:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:57:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:58:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:58:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:58:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:58:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 14:58:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:00:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:00:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:01:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:02:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:02:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:07:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:07:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:08:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:08:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:10:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:11:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:11:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:12:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:12:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:12:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:12:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:14:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:15:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:15:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:18:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:19:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:20:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:24:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:24:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:26:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:27:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:28:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:29:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:32:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:32:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:32:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:32:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:32:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:32:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:38:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:38:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:39:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "jquery-ui-i18n.min.js".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('jquery-ui-i18n....')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jquery-ui-i18n.min.js
+HTTP_REFERER=http://calendar.dev/contact/create
+---
+2012/06/17 15:39:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:39:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:39:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:40:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:41:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:41:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:41:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:41:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:41:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:45:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:45:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:45:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:46:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:46:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:46:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:46:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:46:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:49:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:49:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:50:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:50:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:50:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:50:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 15:51:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:03:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/koleto/public_html/calendar/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggestparticip...')
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('meeting/suggest...')
+#9 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/meeting/suggestparticipants
+---
+2012/06/17 16:03:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:03:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:03:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:03:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:04:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:05:16 [error] [php] Undefined offset: 0 (/home/koleto/public_html/calendar/protected/controllers/MeetingController.php:53)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#7 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/suggestparticipants/Aa
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (53)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:05:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:05:33 [error] [php] Undefined index: q (/home/koleto/public_html/calendar/protected/controllers/MeetingController.php:53)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#7 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/suggestparticipants/Aa
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (53)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:05:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/koleto/public_html/calendar/framework/web/CController.php:337
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggestparticip...')
+#9 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('meeting/suggest...')
+#10 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/meeting/suggestparticipants/Aa
+---
+2012/06/17 16:05:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:05:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/koleto/public_html/calendar/framework/web/CController.php:337
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggestparticip...')
+#9 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('meeting/suggest...')
+#10 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/meeting/suggestparticipants/Aa
+---
+2012/06/17 16:05:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:05:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/koleto/public_html/calendar/framework/web/CController.php:337
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggestparticip...')
+#9 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('meeting/suggest...')
+#10 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/meeting/suggestparticipants/Aa
+---
+2012/06/17 16:05:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestparticipants".' in /home/koleto/public_html/calendar/framework/web/CController.php:484
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CController.php(271): CController->missingAction('suggestparticip...')
+#1 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggestparticip...')
+#2 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('meeting/suggest...')
+#3 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/suggestparticipants/Aa
+---
+2012/06/17 16:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:06:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/koleto/public_html/calendar/framework/web/CController.php:337
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggest')
+#9 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('contact/suggest...')
+#10 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/contact/suggest/a
+---
+2012/06/17 16:06:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:06:50 [error] [php] Undefined variable: q (/home/koleto/public_html/calendar/protected/controllers/ContactController.php:53)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): ContactController->runAction()
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): ContactController->filterAccessControl()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(266): ContactController->runActionWithFilters()
+#7 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): ContactController->run()
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/contact/suggest/a
+in /home/koleto/public_html/calendar/protected/controllers/ContactController.php (53)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:06:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:06:51 [error] [php] Undefined variable: q (/home/koleto/public_html/calendar/protected/controllers/ContactController.php:53)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): ContactController->runAction()
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): ContactController->filterAccessControl()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(266): ContactController->runActionWithFilters()
+#7 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): ContactController->run()
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/contact/suggest/a
+in /home/koleto/public_html/calendar/protected/controllers/ContactController.php (53)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:06:51 [error] [php] Undefined variable: q (/home/koleto/public_html/calendar/protected/controllers/ContactController.php:53)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): ContactController->runAction()
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): ContactController->filterAccessControl()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(266): ContactController->runActionWithFilters()
+#7 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): ContactController->run()
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/contact/suggest/a
+in /home/koleto/public_html/calendar/protected/controllers/ContactController.php (53)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:07:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:07:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:07:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:07:55 [error] [exception.CException] exception 'CException' with message 'Contact and its behaviors do not have a method or closure named "suggestTags".' in /home/koleto/public_html/calendar/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(226): CComponent->__call('suggestTags', Array)
+#1 /home/koleto/public_html/calendar/protected/controllers/ContactController.php(56): CActiveRecord->__call('suggestTags', Array)
+#2 /home/koleto/public_html/calendar/protected/controllers/ContactController.php(56): Contact->suggestTags('3')
+#3 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): ContactController->actionSuggest()
+#4 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggest')
+#13 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('contact/suggest...')
+#14 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/contact/suggest/q/3
+---
+2012/06/17 16:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:07:59 [error] [exception.CException] exception 'CException' with message 'Contact and its behaviors do not have a method or closure named "suggestTags".' in /home/koleto/public_html/calendar/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(226): CComponent->__call('suggestTags', Array)
+#1 /home/koleto/public_html/calendar/protected/controllers/ContactController.php(56): CActiveRecord->__call('suggestTags', Array)
+#2 /home/koleto/public_html/calendar/protected/controllers/ContactController.php(56): Contact->suggestTags('Aa')
+#3 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): ContactController->actionSuggest()
+#4 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggest')
+#13 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('contact/suggest...')
+#14 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/contact/suggest/q/Aa
+---
+2012/06/17 16:07:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:08:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:08:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:08:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:09:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:09:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /home/koleto/public_html/calendar/framework/web/CController.php:484
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CController.php(271): CController->missingAction('suggestTags')
+#1 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('suggestTags')
+#2 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('meeting/suggest...')
+#3 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/suggestTags?q=a&limit=10&timestamp=1339938550229
+HTTP_REFERER=http://calendar.dev/meeting/create
+---
+2012/06/17 16:09:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:22:20 [warning] [application] Failed to set unsafe attribute "participants" of "Meeting".
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (71)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:22:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:24:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:26:07 [warning] [application] Failed to set unsafe attribute "participants" of "Meeting".
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (71)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:26:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:26:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:31:55 [error] [php] Undefined offset: 1 (/home/koleto/public_html/calendar/protected/controllers/MeetingController.php:75)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#1 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#7 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#8 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/create
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (75)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:31:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:32:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:32:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:34:16 [error] [exception.CException] exception 'CException' with message 'MeetingController and its behaviors do not have a method or closure named "getCommandBuilder".' in /home/koleto/public_html/calendar/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(1391): CComponent->__call('getCommandBuild...', Array)
+#1 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(1391): MeetingController->getCommandBuilder()
+#2 /home/koleto/public_html/calendar/protected/controllers/MeetingController.php(76): CActiveRecord->find('name=:name && s...', Array)
+#3 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): MeetingController->actionCreate()
+#4 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/koleto/public_html/calendar/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): CController->run('create')
+#13 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('meeting/create')
+#14 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/meeting/create
+HTTP_REFERER=http://calendar.dev/meeting/create
+---
+2012/06/17 16:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:34:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:34:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:44:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:44:12 [error] [php] Undefined variable: model (/home/koleto/public_html/calendar/protected/models/Meeting.php:89)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(787): Meeting->insert()
+#1 /home/koleto/public_html/calendar/protected/controllers/MeetingController.php(72): Meeting->save()
+#2 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): MeetingController->actionCreate()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#7 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#8 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#11 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#13 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/create
+in /home/koleto/public_html/calendar/protected/models/Meeting.php (89)
+in /home/koleto/public_html/calendar/protected/models/Meeting.php (83)
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (72)
+2012/06/17 16:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:44:30 [error] [php] Indirect modification of overloaded property Meeting::$id has no effect (/home/koleto/public_html/calendar/protected/models/Meeting.php:99)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(787): Meeting->insert()
+#1 /home/koleto/public_html/calendar/protected/controllers/MeetingController.php(72): Meeting->save()
+#2 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): MeetingController->actionCreate()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#7 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#8 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#11 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#13 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/create
+in /home/koleto/public_html/calendar/protected/models/Meeting.php (99)
+in /home/koleto/public_html/calendar/protected/models/Meeting.php (83)
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (72)
+2012/06/17 16:44:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:45:50 [error] [php] Indirect modification of overloaded property Contact::$id has no effect (/home/koleto/public_html/calendar/protected/models/Meeting.php:101)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/db/ar/CActiveRecord.php(787): Meeting->insert()
+#1 /home/koleto/public_html/calendar/protected/controllers/MeetingController.php(72): Meeting->save()
+#2 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(50): MeetingController->actionCreate()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#5 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#7 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#8 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#10 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#11 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#12 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#13 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/create
+in /home/koleto/public_html/calendar/protected/models/Meeting.php (101)
+in /home/koleto/public_html/calendar/protected/models/Meeting.php (83)
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (72)
+2012/06/17 16:45:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:52:04 [error] [php] Invalid argument supplied for foreach() (/home/koleto/public_html/calendar/protected/views/meeting/view.php:29)
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CController.php(870): MeetingController->renderFile()
+#1 /home/koleto/public_html/calendar/framework/web/CController.php(783): MeetingController->renderPartial()
+#2 /home/koleto/public_html/calendar/protected/controllers/MeetingController.php(55): MeetingController->render()
+#3 unknown(0): MeetingController->actionView()
+#4 /home/koleto/public_html/calendar/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#8 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#10 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#11 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#14 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#15 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#16 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/6
+in /home/koleto/public_html/calendar/protected/views/meeting/view.php (29)
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (55)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:52:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:56:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:57:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:57:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:58:05 [error] [php] include(Contanct.php): failed to open stream: No such file or directory (/home/koleto/public_html/calendar/framework/YiiBase.php:418)
+Stack trace:
+#0 /home/koleto/public_html/calendar/protected/views/meeting/view.php(36): spl_autoload_call()
+#1 /home/koleto/public_html/calendar/framework/web/CBaseController.php(127): require()
+#2 /home/koleto/public_html/calendar/framework/web/CBaseController.php(96): MeetingController->renderInternal()
+#3 /home/koleto/public_html/calendar/framework/web/CController.php(870): MeetingController->renderFile()
+#4 /home/koleto/public_html/calendar/framework/web/CController.php(783): MeetingController->renderPartial()
+#5 /home/koleto/public_html/calendar/protected/controllers/MeetingController.php(55): MeetingController->render()
+#6 unknown(0): MeetingController->actionView()
+#7 /home/koleto/public_html/calendar/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#8 /home/koleto/public_html/calendar/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 /home/koleto/public_html/calendar/framework/web/CController.php(309): CInlineAction->runWithParams()
+#10 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(134): MeetingController->runAction()
+#11 /home/koleto/public_html/calendar/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/koleto/public_html/calendar/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#13 /home/koleto/public_html/calendar/framework/web/filters/CInlineFilter.php(59): MeetingController->filterAccessControl()
+#14 /home/koleto/public_html/calendar/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /home/koleto/public_html/calendar/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/koleto/public_html/calendar/framework/web/CController.php(266): MeetingController->runActionWithFilters()
+#17 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(276): MeetingController->run()
+#18 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#19 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/koleto/public_html/calendar/index.php(13): CWebApplication->run()
+REQUEST_URI=/meeting/6
+in /home/koleto/public_html/calendar/protected/views/meeting/view.php (36)
+in /home/koleto/public_html/calendar/protected/controllers/MeetingController.php (55)
+in /home/koleto/public_html/calendar/index.php (13)
+2012/06/17 16:58:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:58:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 16:58:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/17 17:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/koleto/public_html/calendar/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/koleto/public_html/calendar/framework/web/CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 /home/koleto/public_html/calendar/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/koleto/public_html/calendar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
