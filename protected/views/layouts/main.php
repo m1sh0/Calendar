@@ -29,7 +29,9 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Contacts', 'url'=>array('/contacts')),
+				array('label'=>'Contacts', 'url'=>array('/contacts'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Meetings', 'url'=>array('/meetings'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Categories', 'url'=>array('/categories'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Profile', 'url'=>array('/user/profile'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
@@ -47,7 +49,7 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by m1sh0.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->

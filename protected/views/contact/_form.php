@@ -34,10 +34,10 @@
             $this->widget('CJuiDateTimePicker',array(
                 'model'=>$model, 
                 'attribute'=>'birthday', 
-                'mode'=>'datetime', 
-                'options' => array('language'=>'en_us'),
-            ));
-        ?>
+				'value'=>$model->birthday,
+                 'language'=>'en-AU',
+             // additional javascript options for the date picker plugin
+            ));?>
 		<?php echo $form->error($model,'birthday'); ?>
 	</div>
 

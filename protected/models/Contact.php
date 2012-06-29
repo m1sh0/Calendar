@@ -86,6 +86,30 @@ class Contact extends CActiveRecord
 			'note' => 'Note',
 		);
 	}
+	
+	/**
+	 * Suggests a list of existing contacts matching the specified keyword.
+	 * @param string the keyword to be matched
+	 * @param integer maximum number of tags to be returned
+	 * @return array list of matching tag names
+	 */
+	public function suggestParticipants($keyword,$limit=20)
+	{
+	    $participants=$this->findAll(array(
+			'condition'=>'name LIKE :keyword',
+			'order'=>'name',
+			'limit'=>$limit,
+			'params'=>array(
+				':keyword'=>'%'.strtr($keyword,array('%'=>'\%', '_'=>'\_', '\\'=>'\\\\')).'%',
+			),
+		));
+		$names=array();
+		
+		foreach($participants as $participant)
+			$names[]=$participant->name.' '.$participant->surname;
+			
+		return $names;
+	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
@@ -109,4 +133,39 @@ class Contact extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function afterSave()
+	{
+	    if($this->birthday) {
+			$meeting = new Meeting;
+			$meeting->date = $this->birthday;
+			$note = $this->name . ' ' . $this->surname . ' has birthday';
+			$meeting->note = $note;
+			$meeting->save();
+		}
+	    return parent::afterSave();
+	}
+	
+		  public function beforeSave()
+        {
+                if ($this->birthday == '') {
+                        $this->setAttribute('birthday', null);
+                } else {
+                   $this->birthday=date('Y-m-d', strtotime($this->birthday));
+                }
+
+                return parent::beforeSave();
+        } //End beforeSave()    
+
+        /**
+         * Actions to take after to saving the model.
+         * @return boolean parent::afterFind()
+         */
+        public function afterFind()
+        {
+                $retVal = parent::afterSave();
+                $this->birthday=date('m/d/Y', strtotime($this->birthday)); 
+
+                return $retVal;
+        } //End beforeFind()  
 }

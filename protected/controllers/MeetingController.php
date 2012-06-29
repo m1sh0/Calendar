@@ -1,6 +1,6 @@
 <?php
 
-class ContactController extends Controller
+class MeetingController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -31,7 +31,7 @@ class ContactController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','suggest'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -42,21 +42,6 @@ class ContactController extends Controller
 				'users'=>array('*'),
 			),
 		);
-	}
-	
-	/**
-	 * Suggests participants based on the current user input.
-	 * This is called via AJAX when the user is entering the participants input.
-	 */
-	public function actionSuggest()
-	{
-	   
-		if(isset($_GET['q']) && ($keyword=trim($_GET['q']))!=='')
-		{
-			$tags=Contact::model()->suggestParticipants($keyword);
-			if($tags!==array())
-				echo implode("\n",$tags);
-		}
 	}
 
 	/**
@@ -76,17 +61,16 @@ class ContactController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Contact;
+		$model=new Meeting;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Contact']))
+		if(isset($_POST['Meeting']))
 		{
-			$model->attributes=$_POST['Contact'];
-			if($model->save()) {
+			$model->attributes=$_POST['Meeting'];
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
-			}
 		}
 
 		$this->render('create',array(
@@ -106,9 +90,9 @@ class ContactController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Contact']))
+		if(isset($_POST['Meeting']))
 		{
-			$model->attributes=$_POST['Contact'];
+			$model->attributes=$_POST['Meeting'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -125,11 +109,9 @@ class ContactController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			
 			$this->loadModel($id)->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -145,7 +127,15 @@ class ContactController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Contact');
+		$dataProvider=new CActiveDataProvider('Meeting', array(
+			'criteria'=>array(
+				'order'=>'date DESC',
+			),
+			'pagination'=>array(
+				'pageSize'=>20,
+			),
+		));
+		
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -156,10 +146,10 @@ class ContactController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Contact('search');
+		$model=new Meeting('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Contact']))
-			$model->attributes=$_GET['Contact'];
+		if(isset($_GET['Meeting']))
+			$model->attributes=$_GET['Meeting'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -173,7 +163,7 @@ class ContactController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Contact::model()->findByPk($id);
+		$model=Meeting::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -185,7 +175,7 @@ class ContactController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='contact-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='meeting-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

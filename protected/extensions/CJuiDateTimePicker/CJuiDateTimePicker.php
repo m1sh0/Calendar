@@ -16,8 +16,8 @@ class CJuiDateTimePicker extends CJuiDatePicker
 	{
 		if(!in_array($this->mode, array('date','time','datetime')))
 			throw new CException('unknow mode "'.$this->mode.'"');
-		if(!isset($this->language) && $this->language != 'en_us')
-			$this->language='en_us';
+		if(!isset($this->language) && $this->language != 'en-AU')
+			$this->language='en-AU';
 		return parent::init();
 	}
 	
@@ -46,7 +46,7 @@ class CJuiDateTimePicker extends CJuiDatePicker
 
 		if (isset($this->language)){
 			$this->registerScriptFile($this->i18nScriptFile);
-			$js = "jQuery('#{$id}').{$this->mode}picker(jQuery.extend({showMonthAfterYear:false}, jQuery.datepicker.regional['{$this->language}'], {$options}));";
+			$js = "jQuery('#{$id}').{$this->mode}picker(jQuery.extend({showMonthAfterYear:false}, jQuery.datepicker.regional['en-AU'], {$options}));";
 		}
 
 		$cs = Yii::app()->getClientScript();
