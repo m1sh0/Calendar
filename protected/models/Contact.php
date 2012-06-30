@@ -146,13 +146,14 @@ class Contact extends CActiveRecord
 	    return parent::afterSave();
 	}
 	
-		  public function beforeSave()
-        {
-                if ($this->birthday == '') {
-                        $this->setAttribute('birthday', null);
-                } else {
-                   $this->birthday=date('Y-m-d', strtotime($this->birthday));
-                }
+		public function beforeSave()
+		{
+                if($this->birthday != '') {
+				  list($dateT, $time) = explode(' ', $this->birthday);
+				  list($y, $m, $d) = explode('-', $dateT);
+				  $this->birthday = date('Y-m-d', mktime(0, 0, 0, $m, $d, $y));
+				} else
+				  $this->birthday = null;
 
                 return parent::beforeSave();
         } //End beforeSave()    
@@ -164,7 +165,7 @@ class Contact extends CActiveRecord
         public function afterFind()
         {
                 $retVal = parent::afterSave();
-                $this->birthday=date('m/d/Y', strtotime($this->birthday)); 
+                $this->birthday=date('d/m/y', strtotime($this->birthday)); 
 
                 return $retVal;
         } //End beforeFind()  

@@ -128,11 +128,13 @@ class Meeting extends CActiveRecord
 	
 	  public function beforeSave()
         {
-                if ($this->date == '') {
-                        $this->setAttribute('date', null);
-                } else {
-                   $this->date=date('Y-m-d', strtotime($this->date));
-                }
+                if($this->date != '') {
+				  list($dateT, $time) = explode(' ', $this->date);
+				  list($y, $m, $d) = explode('-', $dateT);
+				  list($hours, $minutes) = explode(':', $time);
+				  $this->date = date('Y-m-d G:i', mktime($hours, $minutes, 0, $m, $d, $y));
+				} else
+				  $this->date = null;
 
                 return parent::beforeSave();
         } //End beforeSave()    
@@ -144,7 +146,7 @@ class Meeting extends CActiveRecord
         public function afterFind()
         {
                 $retVal = parent::afterSave();
-                $this->date=date('m/d/Y', strtotime($this->date)); 
+                $this->date=date('Y-M-d G:i', strtotime($this->date)); 
 
                 return $retVal;
         } //End beforeFind()  

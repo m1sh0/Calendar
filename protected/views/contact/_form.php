@@ -36,8 +36,9 @@
                 'attribute'=>'birthday', 
 				'value'=>$model->birthday,
                  'language'=>'en-AU',
-             // additional javascript options for the date picker plugin
-            ));?>
+				 'options'=>array(
+					'dateFormat' => 'yy-mm-dd',
+		)));?>
 		<?php echo $form->error($model,'birthday'); ?>
 	</div>
 

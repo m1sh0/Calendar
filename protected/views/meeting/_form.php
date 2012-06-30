@@ -17,8 +17,9 @@
                 'attribute'=>'date', 
 				'value'=>$model->date,
                  'language'=>'en-AU',
-             // additional javascript options for the date picker plugin
-			));
+				 'options'=>array(
+					'dateFormat' => 'yy-mm-dd',
+            )));
         ?>
 		<?php echo $form->error($model,'date'); ?>
 	</div>
