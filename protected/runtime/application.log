@@ -9411,3 +9411,729 @@ Stack trace:
 REQUEST_URI=/meeting/create
 HTTP_REFERER=http://localhost/meeting/create
 ---
+2012/06/29 23:56:28 [error] [exception.CException] exception 'CException' with message 'Property "CJuiDateTimePicker.dateFormat" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(162): CComponent->__set('dateFormat', 'dd/mm/yy')
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(ContactController), 'CJuiDateTimePic...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('CJuiDateTimePic...', Array)
+#3 C:\wamp\www\protected\views\contact\_form.php(41): CBaseController->widget('CJuiDateTimePic...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#7 C:\wamp\www\protected\views\contact\create.php(15): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\protected\controllers\ContactController.php(94): CController->render('create', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): ContactController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/create')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/contact/create
+HTTP_REFERER=http://localhost/contact/22
+---
+2012/06/30 01:09:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\protected\controllers\ContactController.php:178
+Stack trace:
+#0 C:\wamp\www\protected\controllers\ContactController.php(133): ContactController->loadModel('41')
+#1 [internal function]: ContactController->actionDelete('41')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ContactController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/delete')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/contact/delete/41?ajax=contact-grid
+HTTP_REFERER=http://localhost/contact/admin
+---
+2012/06/30 01:16:43 [error] [exception.CException] exception 'CException' with message 'Property "Meeting.birthday" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('birthday')
+#1 C:\wamp\www\protected\models\Meeting.php(131): CActiveRecord->__get('birthday')
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1008): Meeting->beforeSave()
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#4 C:\wamp\www\protected\controllers\MeetingController.php(72): CActiveRecord->save()
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionCreate()
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/create')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/meeting/create
+HTTP_REFERER=http://localhost/meeting/create
+---
+2012/06/30 01:46:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily_meeting".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily_meeting')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily_meeting')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily_m...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily_meeting
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:15:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily_meeting".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily_meeting')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily_meeting')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily_m...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily_meeting
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily_meeting".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily_meeting')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily_meeting')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily_m...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily_meeting
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily_meeting".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily_meeting')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily_meeting')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily_m...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily_meeting
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:16:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/daily_meeting
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:17:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/daily_meeting
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:20:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:20:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:21:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "daily".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('daily')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:21:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "daily".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('daily')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:24:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily.php".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily.php')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily.php')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily.p...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily.php
+---
+2012/06/30 02:24:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+---
+2012/06/30 02:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily.php".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily.php')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily.php')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily.p...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily.php
+---
+2012/06/30 02:26:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:27:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "protrcted".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('protrcted')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/protrcted/
+---
+2012/06/30 02:28:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "protrcted/views/meeting/daily".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('protrcted/views...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/protrcted/views/meeting/daily
+---
+2012/06/30 02:28:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "protrcted/views/meeting".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('protrcted/views...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/protrcted/views/meeting/
+---
+2012/06/30 02:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meeting/
+---
+2012/06/30 02:29:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meeting/
+---
+2012/06/30 02:29:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meeting/
+---
+2012/06/30 02:29:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meeting/
+---
+2012/06/30 02:29:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meeting/
+---
+2012/06/30 02:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:34:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:34:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:43:02 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(dd, 1,now()).
+in C:\wamp\www\protected\views\meeting\index.php (26)
+in C:\wamp\www\protected\controllers\MeetingController.php (141)
+in C:\wamp\www\index.php (13)
+2012/06/30 02:43:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(dd, 1,now())' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#8 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#9 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\protected\views\meeting\index.php(26): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\protected\controllers\MeetingController.php(141): CController->render('index', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/index')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/meetings
+HTTP_REFERER=http://localhost/contacts
+---
+2012/06/30 02:44:46 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(d, 1,now()).
+in C:\wamp\www\protected\views\meeting\index.php (26)
+in C:\wamp\www\protected\controllers\MeetingController.php (141)
+in C:\wamp\www\index.php (13)
+2012/06/30 02:44:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(d, 1,now())' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#8 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#9 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\protected\views\meeting\index.php(26): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\protected\controllers\MeetingController.php(141): CController->render('index', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/index')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/meetings
+HTTP_REFERER=http://localhost/contacts
+---
+2012/06/30 02:44:47 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(d, 1,now()).
+in C:\wamp\www\protected\views\meeting\index.php (26)
+in C:\wamp\www\protected\controllers\MeetingController.php (141)
+in C:\wamp\www\index.php (13)
+2012/06/30 02:44:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(d, 1,now())' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#8 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#9 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\protected\views\meeting\index.php(26): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\protected\controllers\MeetingController.php(141): CController->render('index', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionIndex()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/index')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/meetings
+HTTP_REFERER=http://localhost/contacts
+---
+2012/06/30 02:53:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:56:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 02:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "daily".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('daily')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 03:10:43 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\wamp\www\framework\zii\widgets\CBaseListView.php:103
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#1 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\wamp\www\protected\views\meeting\daily.php(18): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('daily', Array, true)
+#8 C:\wamp\www\protected\controllers\MeetingController.php(154): CController->render('daily', Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionDaily()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 03:11:33 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\wamp\www\framework\zii\widgets\CBaseListView.php:103
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#1 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\wamp\www\protected\views\meeting\daily.php(18): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('daily', Array, true)
+#8 C:\wamp\www\protected\controllers\MeetingController.php(158): CController->render('daily', Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionDaily()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 03:11:34 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\wamp\www\framework\zii\widgets\CBaseListView.php:103
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#1 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\wamp\www\protected\views\meeting\daily.php(18): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('daily', Array, true)
+#8 C:\wamp\www\protected\controllers\MeetingController.php(158): CController->render('daily', Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionDaily()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 03:12:10 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(dd, 1,now()).
+in C:\wamp\www\protected\views\meeting\daily.php (18)
+in C:\wamp\www\protected\controllers\MeetingController.php (158)
+in C:\wamp\www\index.php (13)
+2012/06/30 03:12:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(dd, 1,now())' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#8 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#9 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\protected\views\meeting\daily.php(18): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('daily', Array, true)
+#15 C:\wamp\www\protected\controllers\MeetingController.php(158): CController->render('daily', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionDaily()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 03:12:11 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(dd, 1,now()).
+in C:\wamp\www\protected\views\meeting\daily.php (18)
+in C:\wamp\www\protected\controllers\MeetingController.php (158)
+in C:\wamp\www\index.php (13)
+2012/06/30 03:12:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION calendar.DATEADD does not exist. The SQL statement executed was: SELECT COUNT(*) FROM `meeting` `t` WHERE date > now() and date < DATEADD(dd, 1,now())' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\wamp\www\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#8 C:\wamp\www\framework\web\CBaseController.php(148): CListView->init()
+#9 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\protected\views\meeting\daily.php(18): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#14 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('daily', Array, true)
+#15 C:\wamp\www\protected\controllers\MeetingController.php(158): CController->render('daily', Array)
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionDaily()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('daily')
+#26 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/daily')
+#27 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\wamp\www\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/daily
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 03:13:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "meetings".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('meetings')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('meetings')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/meeting...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/meetings
+HTTP_REFERER=http://localhost/daily
+---
+2012/06/30 03:13:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "meetings".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('meetings')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('meetings')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/meeting...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/meeting/meetings
+HTTP_REFERER=http://localhost/daily
+---

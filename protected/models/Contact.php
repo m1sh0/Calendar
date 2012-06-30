@@ -136,9 +136,14 @@ class Contact extends CActiveRecord
 	
 	public function afterSave()
 	{
-	    if($this->birthday) {
+	    if($this->birthday != '') {
+			$date = strftime ('Y-m-d', $this->birthday); 
+			list($dateT, $time) = explode('-', $this->birthday);
+			list($y, $m, $d) = explode('-', $dateT);
+			$meetingDate = date('Y-m-d G:i', mktime(10, 0, 0, $m, $d, 2013));
+			
 			$meeting = new Meeting;
-			$meeting->date = $this->birthday;
+			$meeting->date = $meetingDate;
 			$note = $this->name . ' ' . $this->surname . ' has birthday';
 			$meeting->note = $note;
 			$meeting->save();

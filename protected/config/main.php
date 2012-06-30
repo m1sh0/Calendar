@@ -66,6 +66,7 @@ return array(
 			'rules'=>array(
 			    'contacts'=>'contact/index',
 			    'meetings'=>'meeting/index',
+				'daily'=>'meeting/daily',
 				'categories'=>'category/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

@@ -27,15 +27,15 @@ class MeetingController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','daily'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','daily'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','daily'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -140,7 +140,24 @@ class MeetingController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
+	
+	public function actionDaily()
+	{
+		$dataProvider=new CActiveDataProvider(Meeting::model(), array(
+			'criteria'=>array(
+				'condition'=>'date > now() and date < AddDate(now(),INTERVAL 1 DAY)',
+				'order'=>'date ASC',
+			),
+				'pagination'=>array(
+				'pageSize'=>20,
+			),
+		));
+		
+		$this->render('daily',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+	
 	/**
 	 * Manages all models.
 	 */

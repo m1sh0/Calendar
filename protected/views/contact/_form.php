@@ -37,6 +37,10 @@
 				'value'=>$model->birthday,
                  'language'=>'en-AU',
 				 'options'=>array(
+					'changeMonth'=>'true', 
+                    'changeYear'=>'true',   
+                    'yearRange' => '-80:+20',        
+                    'showAnim'=>'fold', // 'show' (the default), 'slideDown', 'fadeIn', 'fold'
 					'dateFormat' => 'yy-mm-dd',
 		)));?>
 		<?php echo $form->error($model,'birthday'); ?>

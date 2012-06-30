@@ -6,6 +6,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Create Meeting', 'url'=>array('create')),
 	array('label'=>'Manage Meeting', 'url'=>array('admin')),
+	array('label'=>'24 Meeting', 'url'=>array('daily')),
 );
 ?>
 
