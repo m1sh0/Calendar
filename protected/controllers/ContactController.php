@@ -125,16 +125,24 @@ class ContactController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		
 		if(Yii::app()->request->isPostRequest)
 		{
-			// we only allow deletion via POST request
+		
+				
+			$sql = "SELECT * from contact c join contact_meeting cm where cm.contact_id = :id and c.id = cm.contact_id";
+			$contact = Contact::model()->findBySql($sql, array(':id'=>$id,));
 			
-			$this->loadModel($id)->delete();
+			if($contact) {
+				throw new CHttpException(400,'Invalid request. Please dellete mettings with this contact.');
+			}
+			else {
+				// we only allow deletion via POST request		
+				$this->loadModel($id)->delete();
 
-			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-			if(!isset($_GET['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+				if(!isset($_GET['ajax']))
+					$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			}
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');

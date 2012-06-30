@@ -27,7 +27,11 @@ $('.search-form form').submit(function(){
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+or <b>=</b>) at the beginning of <b>each text field</b> of your search values to specify how the comparison should be done.
+</p>
+
+<p>
+<b>Please for dates follow this example ">2012-6-30 15:36".</b>
 </p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
@@ -40,7 +44,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'meeting-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'date',

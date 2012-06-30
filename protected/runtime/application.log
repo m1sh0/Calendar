@@ -10137,3 +10137,153 @@ Stack trace:
 REQUEST_URI=/meeting/meetings
 HTTP_REFERER=http://localhost/daily
 ---
+2012/06/30 03:44:18 [error] [exception.CException] exception 'CException' with message 'Contact and its behaviors do not have a method or closure named "exist".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('exist', Array)
+#1 C:\wamp\www\protected\controllers\ContactController.php(134): CActiveRecord->__call('exist', Array)
+#2 C:\wamp\www\protected\controllers\ContactController.php(134): Contact->exist('join contact_me...', Array)
+#3 [internal function]: ContactController->actionDelete('54')
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ContactController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/delete')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/contact/delete/54?ajax=contact-grid
+HTTP_REFERER=http://localhost/contact/admin
+---
+2012/06/30 03:45:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please dellete mettings with this contact.' in C:\wamp\www\protected\controllers\ContactController.php:136
+Stack trace:
+#0 [internal function]: ContactController->actionDelete('54')
+#1 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ContactController), Object(ReflectionMethod), Array)
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/delete')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/contact/delete/54?ajax=contact-grid
+HTTP_REFERER=http://localhost/contact/admin
+---
+2012/06/30 03:51:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please dellete mettings with this category.' in C:\wamp\www\protected\controllers\CategoryController.php:116
+Stack trace:
+#0 [internal function]: CategoryController->actionDelete('1')
+#1 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('category/delete')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/category/delete/1?ajax=category-grid
+HTTP_REFERER=http://localhost/category/admin
+---
+2012/06/30 04:36:45 [error] [exception.CException] exception 'CException' with message 'Property "Meeting.name" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('name')
+#1 C:\wamp\www\protected\models\Meeting.php(117): CActiveRecord->__get('name')
+#2 C:\wamp\www\protected\views\meeting\admin.php(46): Meeting->search()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\pro...')
+#4 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\pro...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\pro...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#7 C:\wamp\www\protected\controllers\MeetingController.php(173): CController->render('admin', Array)
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): MeetingController->actionAdmin()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('meeting/admin')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/meeting/admin
+HTTP_REFERER=http://localhost/meetings
+---
+2012/06/30 05:02:55 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:00 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:00 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:04 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:08 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:11 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:19 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:21 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:25 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:03:33 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:13:51 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:13:53 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:13:55 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:13:58 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:14:00 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:14:08 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:14:12 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:14:15 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)
+2012/06/30 05:14:24 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\wamp\www\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\wamp\www\index.php (13)

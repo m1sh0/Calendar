@@ -126,6 +126,24 @@ class Meeting extends CActiveRecord
 		));
 	}
 	
+	public function mySearch($name, $surname)
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+		
+		$criteria->compare('id',$this->id);
+		$criteria->compare('date',$this->date,true);
+		$criteria->compare('place',$this->place,true);
+		$criteria->compare('category_id',$this->category_id);
+		$criteria->compare('note',$this->note,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+	
 	  public function beforeSave()
         {
                 if($this->date != '') {
